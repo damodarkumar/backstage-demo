@@ -1,0 +1,4 @@
+config:
+  aws:region: eu-central-1
+  pulumi-vm-creation6:instanceType: t3.medium
+  pulumi-vm-creation6:vpcNetworkCidr: 10.0.0.0/16

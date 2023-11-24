@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: pulumi-vm-creation6
+  description: The virtual machine for the dev
+  links:
+  - title: Pulumi Console
+    url: https://app.pulumi.com/backstage/pulumi-vm-creation6/dev
+spec:
+  type: virtual-machine
+  owner: "group:default/guests"
+  lifecycle: experimental
+  system: system:default/examples
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pulumi-vm-creation6
+  description: "pulumi vm creation"
+  annotations:
+    github.com/project-slug: damodarkumar/backstage-demo
+    pulumi.com/project-slug: backstage/pulumi-vm-creation6/dev
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/guests"
+  system: system:default/examples
+  dependsOn:
+  - resource:default/pulumi-vm-creation6
